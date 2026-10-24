@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Acentúa · nivel inicial</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef3f1;--card:#fff;--ink:#14302f;--mut:#51696a;--teal:#0e6e6a;--onteal:#fff;--amb:#f5b301;--ambink:#2e2200;--line:#c9d7d3;--okbg:#dcf3e6;--oktx:#0d4f2c;--badbg:#fde3e1;--badtx:#7a1d1d;--sh:#b88500;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b1b;--card:#162827;--ink:#e7f1ef;--mut:#9fb6b3;--teal:#4cc2b9;--onteal:#06201e;--amb:#ffc83d;--ambink:#2e2200;--line:#2f4846;--okbg:#14412b;--oktx:#bff0d5;--badbg:#4a1d1d;--badtx:#ffd0d0;--sh:#a67c00}}
+:root[data-theme="dark"]{--bg:#0e1b1b;--card:#162827;--ink:#e7f1ef;--mut:#9fb6b3;--teal:#4cc2b9;--onteal:#06201e;--amb:#ffc83d;--ambink:#2e2200;--line:#2f4846;--okbg:#14412b;--oktx:#bff0d5;--badbg:#4a1d1d;--badtx:#ffd0d0;--sh:#a67c00}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.45 "Atkinson Hyperlegible",Verdana,sans-serif}
+.app{max-width:640px;margin:0 auto;padding:16px 16px 48px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.hero{display:flex;align-items:center;gap:16px;margin:6px 0 16px}
+.mark{flex:none;width:84px;height:84px;border-radius:22px;background:var(--teal);color:var(--amb);font:700 84px/1.05 Georgia,serif;text-align:center;overflow:hidden}
+h1{margin:0;font-size:36px;line-height:1.05}
+.hero p{margin:6px 0 0;color:var(--mut);font-size:16px}
+.route{display:flex;gap:6px;margin:0 0 16px}
+.route span{flex:1;border:2px solid var(--teal);border-radius:12px;padding:7px 6px;text-align:center;font-weight:700;font-size:14px;background:var(--card)}
+.menu{display:grid;gap:10px}
+.mc{display:flex;align-items:center;gap:14px;text-align:left;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:13px 14px;width:100%}
+.mc:hover{border-color:var(--teal)}
+.mc .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--teal);color:var(--onteal);display:grid;place-items:center;font-weight:700;font-size:22px}
+.mc.all{border-color:var(--amb)}.mc.all .n{background:var(--amb);color:var(--ambink)}
+.mc b{display:block}.mc small{color:var(--mut);font-size:15px;display:block;line-height:1.3}
+.mc .stt{margin-left:auto;color:var(--amb);font-size:20px;letter-spacing:2px;filter:saturate(1.2)}
+.tip{color:var(--mut);font-size:15px;margin-top:18px}
+.top{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.back{border:0;background:none;color:var(--mut);font-size:15px;padding:8px 4px}
+.bar{flex:1;height:10px;background:var(--line);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal);transition:width .4s}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-weight:700;font-size:15px;white-space:nowrap}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:18px 14px;text-align:center}
+.q{font-weight:700;margin:0 0 12px;display:flex;gap:10px;align-items:center;justify-content:center;text-align:left}
+.sn{flex:none;width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--onteal);display:grid;place-items:center;font-size:17px}
+.wd{display:flex;justify-content:center;align-items:center;margin:14px 0 18px;--f:min(42px,calc((min(100vw,640px) - 80px)/(var(--n)*1.4)))}
+.L{font-size:var(--f);width:.8em;text-align:center;font-weight:700;line-height:1.5;color:var(--ink)}
+.L.v{color:var(--teal)}
+.g{position:relative;border:0;background:none;padding:0;width:.55em;height:1.5em;font-size:var(--f)}
+.g:before{content:"";position:absolute;inset:-6px -8px}
+.g:after{content:"";position:absolute;left:50%;top:10%;bottom:10%;border-left:2px dotted var(--mut);opacity:.6}
+.g.on:after{border-left:5px solid var(--amb);border-radius:3px;opacity:1;margin-left:-2px}
+.lock{pointer-events:none}
+.sylrow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:12px 0 14px}
+.sw{text-align:center}
+.sy{border:3px solid var(--teal);border-radius:14px;padding:10px 14px;font-size:30px;font-weight:700;background:var(--card);min-width:56px;transition:transform .15s}
+.sy.tn{background:var(--amb);color:var(--ambink);border-color:var(--amb)}
+.sy.over{transform:scale(1.1);border-color:var(--amb)}
+.cap{font-size:14px;color:var(--mut);min-height:20px;margin-top:4px}
+.vw{color:var(--teal);border-radius:6px;padding:0 1px}
+.sy.tn .vw{color:var(--ambink)}
+.vw.over{background:var(--amb);color:var(--ambink)}
+.vw.tl{font-family:Georgia,serif}
+.tray{display:flex;align-items:center;justify-content:center;gap:18px;margin:14px 0;min-height:76px}
+.tok{touch-action:none;user-select:none;-webkit-user-select:none;display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;border-radius:50%;background:var(--amb);color:var(--ambink);font:700 56px/1 Georgia,serif;box-shadow:0 4px 0 var(--sh);cursor:grab;padding-top:8px}
+.tok.fz{width:auto;border-radius:40px;padding:0 22px;height:56px;font:700 19px "Atkinson Hyperlegible",Verdana,sans-serif}
+.tok.sel{outline:4px solid var(--teal);outline-offset:3px}
+.ghost{position:fixed;z-index:99;pointer-events:none;transform:scale(1.15) rotate(-6deg);box-shadow:0 10px 18px rgba(0,0,0,.3)}
+.zone{border:3px dashed var(--mut);border-radius:14px;padding:14px 16px;font-weight:700;color:var(--mut);transition:transform .15s}
+.zone.over{border-color:var(--amb);color:var(--ink);transform:scale(1.08)}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:6px}
+.ch{min-width:128px;border:2px solid var(--teal);background:var(--card);border-radius:14px;padding:12px 14px;font-weight:700}
+.ch.ok{background:var(--teal);color:var(--onteal)}
+.ch:disabled{cursor:default;opacity:.55}.ch.ok:disabled{opacity:1}
+.btn{border:0;border-radius:14px;padding:13px 22px;font-weight:700;background:var(--teal);color:var(--onteal)}
+.btn.alt{background:var(--card);color:var(--ink);border:2px solid var(--teal)}
+.note{margin:6px 0;color:var(--mut)}.note b{color:var(--ink)}
+.last{display:inline-block;min-width:1.5em;background:var(--amb);color:var(--ambink);border-radius:8px;padding:0 6px}
+.chu{margin:10px 0;text-align:left;font-size:15px}
+.chu summary{cursor:pointer;color:var(--teal);font-weight:700;text-align:center}
+.chu table{border-collapse:collapse;width:100%;margin-top:8px}
+.chu td,.chu th{border:1px solid var(--line);padding:5px 8px}
+.chu th{background:var(--teal);color:var(--onteal);text-align:left}
+.fb{margin:14px 0 10px;padding:11px 13px;border-radius:12px;font-weight:700;text-align:left}
+.fb.ok{background:var(--okbg);color:var(--oktx);animation:pop .3s}
+.fb.bad{background:var(--badbg);color:var(--badtx)}
+.stars{font-size:60px;letter-spacing:8px;color:var(--amb);line-height:1.1}
+.stars span{display:inline-block;animation:pop .5s both}.stars span:nth-child(2){animation-delay:.15s}.stars span:nth-child(3){animation-delay:.3s}
+h2{margin:6px 0 4px;font-size:26px}
+.spk{border:2px solid var(--teal);background:var(--card);border-radius:30px;padding:9px 20px;font-weight:700;margin:0 0 4px}
+.spk:active{background:var(--teal);color:var(--onteal)}
+.spm{font-size:14px;color:var(--mut);margin-bottom:6px}
+.sy.tp{font-family:inherit;color:var(--ink);cursor:pointer;line-height:1.2}
+.sy.tp.tn{color:var(--ambink)}
+.vb{border:0;border-bottom:3px dotted var(--teal);background:none;padding:0;cursor:pointer;font-family:inherit;border-radius:0}
+.vb.tl{background:var(--amb);color:var(--ambink);border-bottom-color:transparent;border-radius:6px}
+.fr{margin:8px 0;padding:10px 12px;border-radius:12px;text-align:left;font-size:16px;line-height:1.4}
+.fr.ok{background:var(--okbg);color:var(--oktx)}
+.fr.bad{background:var(--badbg);color:var(--badtx)}
+.sy.tp.bad{background:var(--badbg);color:var(--badtx);border-color:var(--badtx)}
+.ch.on{background:var(--teal);color:var(--onteal)}
+.ch.no{background:var(--badbg);color:var(--badtx);border-color:var(--badtx)}
+.bd{list-style:none;padding:0;margin:8px 0;text-align:left;display:inline-block}
+@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><div class="app" id="app"></div>
+<script>
+var RAW="ME-sa|to-MA-te|LU-nes|LE-jos|MAR-tes|pe-LO-ta|vo-LU-men|ta-BA-co|ven-TA-na|PE-rro|CO-che|MA-dre|es-TRE-lla|ca-FÉ|pa-PEL|ja-MÓN|re-LOJ|ca-JÓN|co-ci-NAR|ju-GAR|ca-LOR|sa-LÓN|ca-pi-TÁN|in-te-RÉS|a-ZUL|ra-TÓN|pa-RED|ba-LÓN|cris-TAL|ru-BÍ|co-li-BRÍ|ver-DAD|or-de-na-DOR|mu-JER|ÁR-bol|LÁ-piz|FÁ-cil|ÁN-gel|ÁL-bum|TÚ-nel|CÁR-cel|a-ZÚ-car|di-FÍ-cil|te-LÉ-fo-no|MÚ-si-ca|SÁ-ba-do|LÁM-pa-ra|MÁ-gi-co|RÁ-pi-do|PÁ-ja-ro|es-TÓ-ma-go|pe-LÍ-cu-la|SÍM-bo-lo|MÚS-cu-lo|DÍ-ga-me-lo|CÓM-pra-me-lo|LLÉ-va-te-lo".split("|");
+var TY=["aguda","llana","esdrújula","sobresdrújula"],OR=["la última","la penúltima","la antepenúltima","la anterior a la antepenúltima"],NM=["última","penúltima","3.ª","4.ª"];
+var M=[{id:1,ic:"1",t:"Separo sílabas",d:"Corta cada palabra en sílabas",ph:["cut"]},{id:2,ic:"2",t:"Hallo la sílaba tónica",d:"Busca la sílaba fuerte y clasifica la palabra",ph:["ton"]},{id:3,ic:"3",t:"Pongo la tilde",d:"Aplica las normas: ¿acaba en N, S o vocal?",ph:["til"]},{id:4,ic:"🏆",t:"Reto completo",d:"Todo el proceso tú solo; te corregimos al final de cada palabra",ph:["free"]}];
+function st(x){return x.replace(/[áéíóú]/g,function(m){return"aeiou"["áéíóú".indexOf(m)]})}
+function P(s){var y=s.split("-"),t=y.findIndex(function(p){return p===p.toUpperCase()}),c=y.map(function(p){return p.toLowerCase()}),k=c.join(""),pl=st(k),n=y.length-1-t,l=pl.slice(-1),g=/[nsaeiou]/.test(l);return{y:c.map(st),s:c,t:t,k:k,pl:pl,n:n,l:l,g:g,tl:n>1||(n==0&&g)||(n==1&&!g)}}
+var RAW2="VA-so|PLU-ma|LA-do|MO-da|NU-be|RO-pa|SI-lla|GA-to|PO-llo|PE-ra|MA-no|CAR-ta|FOR-ma|SAL-ta|CAM-po|PUN-to|BAN-co|NO-che|ma-LE-ta|bo-TE-lla|cu-CHA-ra|ca-BA-llo|za-PA-to|ban-DE-ra|ti-JE-ras|di-NE-ro|cor-BA-ta|FLE-cha|GLO-bo|es-ca-LE-ra|la-DRI-llo|ca-RRE-ra|pa-TA-ta|CHI-co|cha-LE-co|na-RAN-ja|BA-ña|ma-ÑA-na|NI-ño|se-ÑO-ra|ca-MI-sa|TO-ro|LO-bo|ZO-rro|ga-LLE-ta|ma-ri-PO-sa|TE-nis|a-MI-go|a-ma-RI-llo|e-le-FAN-te|e-ne-MI-go|se-MI-lla|co-CI-na|JO-ven|i-MA-gen|CO-men|a-MI-gos|ca-MI-sas|za-PA-tos|pe-LO-tas|to-MA-tes|a-MOR|do-LOR|co-LOR|com-PRAR|ha-BLAR|can-TAR|sal-TAR|mi-RAR|ven-DER|be-BER|co-MER|co-RRER|ve-NIR|es-cri-BIR|sa-LIR|vi-VIR|to-MAR|la-VAR|pin-TAR|ca-ZAR|can-SAR|ce-RRAR|ho-TEL|ca-NAL|fe-LIZ|ma-TIZ|se-ÑOR|ac-TOR|vir-TUD|sa-BER|po-DER|ha-CER|de-BER|vol-VER|ca-mi-NAR|li-MÓN|bo-TÓN|pa-TÍN|ja-BÓN|ca-ma-RÓN|co-ra-ZÓN|a-de-MÁS|a-TRÁS|so-FÁ|bi-be-RÓN|a-LLÍ|a-SÍ|MÓ-vil|DÓ-lar|CRÁ-ter|CÉS-ped|MÁR-mol|LÍ-der|DÓ-cil|HÁ-bil|Ú-til|i-NÚ-til|Á-gil|MÍ-sil|CÓN-sul|ca-RÁC-ter|FÉR-til|TÉC-ni-co|LÓ-gi-co|CÓ-mi-co|TÍ-pi-co|PÁ-gi-na|CÁ-ma-ra|PÉ-ta-lo|TÓ-xi-co|LÁ-gri-ma|pi-RÁ-mi-de|ÁL-ge-bra|PLÁ-ta-no|ro-MÁN-ti-co|fan-TÁS-ti-co|e-LÉC-tri-co|e-LÁS-ti-co|ma-te-MÁ-ti-cas|SÍ-la-ba|GRÁ-fi-co|PÁ-ni-co|DÍ-ga-se-lo|PÍ-de-se-lo|CÓ-me-te-lo|TÓ-ma-te-lo|PÁ-sa-me-lo|CÁN-ta-me-la|es-CRÍ-be-me-lo";
+var RAW3="CA-sa|CO-sa|PO-zo|PA-ta|PA-to|RA-ta|RA-to|RE-ma|RI-sa|RO-sa|RU-ta|SO-pa|SU-ma|TA-pa|TE-la|TI-ra|TO-ma|TU-bo|VI-da|VI-no|LU-na|BO-ca|BO-la|CA-ja|CA-ra|CA-ro|CE-na|CE-ro|CI-ne|CO-pa|CU-na|CU-ña|DA-do|DE-do|FA-ro|FI-la|FO-ca|FU-ma|GA-na|GO-ma|GO-rra|HO-ja|HO-ra|HU-mo|JE-fe|LA-na|LE-ña|LI-ga|LO-ma|LO-te|MA-pa|ME-ta|MO-no|MU-la|MU-ro|NA-ta|NI-do|NO-ta|NU-do|O-lla|OR-den|PA-la|PE-na|PI-la|PU-ño|PU-ma|RA-na|SA-la|SE-da|TA-za|TI-za|TO-ca|VE-la|VE-na|VI-lla|ZU-mo|ME-nos|FO-to|FRU-ta|GA-fas|MO-ta|NA-ve|PUN-ta|CAR-ne|CA-rro|CER-ca|COS-ta|DAR-do|FAL-da|FIR-ma|GAN-ga|HAM-bre|LAM-pa|LAR-go|MAL-va|MAN-ta|MOS-ca|MUL-ta|NOR-te|PAL-co|PAL-ma|PAN-za|PAS-ta|PER-la|PIN-ta|PIS-ta|PLAN-ta|POL-vo|PUL-pa|RAN-go|RIS-co|RON-da|SAL-sa|SOM-bra|SUR-co|TAN-go|TIN-ta|TOR-ta|TRIS-te|TRO-za|VEN-ta|VER-de|VIS-ta|ZUR-do|BAN-da|BAR-ba|BAR-co|BA-rro|BOL-sa|BOM-ba|BUR-la|CAL-ma|CAR-ga|CIN-ta|COL-cha|COM-pra|CON-de|COR-ta|CUL-pa|DAN-za|DIS-co|FIN-ca|FLO-ra|HOM-bro|JA-rra|LAN-za|LIS-ta|MAN-cha|MAR-cha|MIS-ma|MOL-de|MON-ja|MUN-do|PAR-do|RAS-go|ROS-ca|RUM-ba|SEN-da|TRAM-pa|TRUN-co|TUM-ba|VIR-gen|GRAN-de|AL-to|MA-lo|RI-co|PO-bre|CLA-ro|os-CU-ro|BLAN-do|LI-so|LEN-to|FI-no|GOR-do|LI-bros|CA-sas|ME-sas|PE-rros|CO-ches|PLA-tos|CA-lles|MA-dres|CAN-tan|VI-ven|HA-blan|MI-ran|TO-man|LLA-man|CO-rren|ma-DE-ra|ma-NE-ra|ba-RA-ja|ba-RRI-ga|be-BI-da|bo-NI-to|bu-FAN-da|ca-BE-za|ca-BI-na|ca-DE-na|ca-NAS-ta|ca-RE-ta|ca-RRE-ta|ca-SI-lla|ce-BO-lla|ci-ga-RRI-llo|co-LE-ga|co-LI-na|co-MI-da|co-NE-jo|co-RO-na|co-SE-cha|cu-CHI-llo|de-LAN-te|de-RE-cha|di-VER-so|do-MIN-go|e-NE-ro|es-PE-jo|es-PE-ra|es-PI-na|es-TA-do|es-TU-fa|fe-BRE-ro|ga-LLI-na|ga-NA-do|ga-RA-je|gi-TA-no|he-LA-do|he-RI-da|her-MA-no|her-MA-na|her-MO-sa|her-MO-so|la-VA-bo|le-CHU-ga|ma-dru-GA-da|ma-RI-do|me-DI-da|me-JI-lla|mo-CHI-la|mo-NE-da|no-VE-la|o-RE-ja|pa-LA-bra|pa-na-DE-ro|pa-RA-da|pa-RE-ja|pe-RE-za|pe-RI-co|pe-RRI-to|pi-JA-ma|pla-NE-ta|po-TRE-ro|ro-DI-lla|sa-LA-do|sa-LI-da|se-CRE-to|se-MA-na|ta-BLE-ro|ta-RI-ma|te-la-RA-ña|te-RRA-za|tu-RIS-ta|ve-CI-no|ve-RA-no|vo-LAN-te|a-MA-ble|a-RE-na|a-pa-RA-to|a-ve-NI-da|a-VIS-pa|bi-ci-CLE-ta|cho-co-LA-te|co-ME-ta|cu-LE-bra|es-CO-ba|gra-NA-da|la-GAR-to|li-BRE-ta|lo-CU-ra|ma-NI-ja|mo-MEN-to|mu-ÑE-ca|pla-TI-llo|po-SA-da|pu-LI-do|re-VIS-ta|so-BRI-no|ta-LA-dro|to-BI-llo|tor-NI-llo|tor-TU-ga|tri-BU-na|ve-NA-do|vi-SI-ta|ve-NE-no|ca-ba-LLE-ro|co-ci-NE-ro|im-po-SI-ble|po-SI-ble|ba-LO-nes|li-MO-nes|bo-TO-nes|co-ra-ZO-nes|ja-BO-nes|ca-JO-nes|ra-TO-nes|sa-LO-nes|pa-TI-nes|pa-PE-les|a-MO-res|co-LO-res|do-LO-res|mu-JE-res|se-ÑO-res|fe-LI-ces|ma-TI-ces|pa-RE-des|ho-TE-les|ca-NA-les|ca-rac-TE-res|ju-ga-DO-res|pro-fe-SO-res|doc-TO-res|ca-pi-TA-nes|ca-MI-nos|ven-TA-nas|bo-TE-llas|ma-LE-tas|ga-LLI-nas|ba-RA-jas|vi-SI-tas|ca-BE-zas|ma-NE-ras|pa-LA-bras|se-MA-nas|re-GA-los|tu-RIS-tas|ga-RA-jes|es-CU-chan|es-CRI-ben|tra-BA-jan|ca-MI-nan|es-PE-ran|vo-LA-mos|can-TA-mos|ha-BLA-mos|com-PRA-mos|co-ME-mos|vi-VI-mos|es-cri-BI-mos|can-TA-ba|ha-BLA-ba|ca-mi-NA-ba|ju-GA-ba|mi-RA-ba|es-cu-CHA-ba|tra-ba-JA-ba|com-PRA-ba|del-GA-do|ba-RA-to|can-SA-do|mo-JA-do|ves-TI-do|pe-SA-do|fa-MO-so|ce-RRA-do|cam-PA-na|ca-ma-RE-ro|ca-rre-TE-ra|en-sa-LA-da|jar-di-NE-ro|la-pi-CE-ro|lec-TU-ra|li-mo-NA-da|ma-ri-NE-ro|ne-VE-ra|pe-LU-ca|pis-CI-na|pri-ma-VE-ra|sa-ban-DI-ja|te-JA-do|a-BRIR|a-MAR|a-TAR|ba-JAR|ba-RRER|bo-RRAR|bus-CAR|co-CER|co-SER|cor-TAR|cos-TAR|cru-ZAR|cu-RAR|de-JAR|des-can-SAR|des-per-TAR|di-bu-JAR|em-pe-ZAR|en-cen-DER|en-se-ÑAR|en-TRAR|es-cu-CHAR|es-pe-RAR|es-TAR|fre-GAR|ga-NAR|gas-TAR|gri-TAR|ha-BER|le-van-TAR|lle-GAR|lle-NAR|lle-VAR|lla-MAR|lu-CHAR|man-DAR|ma-TAR|mo-VER|na-DAR|na-CER|ne-GAR|o-LER|pa-GAR|pa-RAR|pa-SAR|pe-DIR|pe-GAR|pe-LAR|pen-SAR|per-DER|pi-SAR|po-NER|re-ga-LAR|re-pe-TIR|ro-BAR|sa-CAR|sen-TIR|ser-VIR|sol-TAR|su-BIR|ta-PAR|te-NER|ter-mi-NAR|ti-RAR|tra-ba-JAR|tro-pe-ZAR|u-SAR|vo-LAR|vo-TAR|co-RRAL|fu-SIL|mo-RAL|o-LOR|pe-DAL|pu-ÑAL|ve-LOZ|ca-PAZ|na-RIZ|u-ni-DAD|ju-ven-TUD|li-ber-TAD|ve-lo-ci-DAD|u-ti-li-DAD|ca-li-DAD|ca-ri-DAD|fe-li-ci-DAD|na-vi-DAD|ra-pi-DEZ|ba-ña-DOR|ven-ti-la-DOR|pro-fe-SOR|di-rec-TOR|doc-TOR|mo-TOR|ca-za-DOR|ju-ga-DOR|tra-ba-ja-DOR|ven-de-DOR|pas-TOR|pin-TOR|es-cri-TOR|co-li-FLOR|hos-pi-TAL|a-za-FRÁN|bal-CÓN|co-MÍ|fran-CÉS|jar-DÍN|ja-ba-LÍ|la-DRÓN|ma-RRÓN|o-LÍ|pe-DÍ|pen-SÓ|sen-TÍ|vi-VÍ|vo-LÓ|bo-te-LLÓN|ser-MÓN|si-LLÓN|ta-LÓN|tu-RRÓN|mon-TÓN|pa-TRÓN|bom-BÓN|ca-ÑÓN|ja-RRÓN|mi-LLÓN|ra-ZÓN|sa-ZÓN|ten-DRÉ|pon-DRÉ|ha-RÉ|ve-RÉ|da-RÉ|i-RÉ|ten-DRÁS|ci-PRÉS|sar-TÉN|a-LLÁ|a-CÁ|ja-MÁS|de-MÁS|al-GÚN|nin-GÚN|DÉ-bil|CÁ-liz|FÚ-til|LÁ-ser|MÁR-tir|MÁS-til|NÉC-tar|RÉ-cord|TÓ-rax|FÉ-nix|ca-DÁ-ver|es-TÉ-ril|FRÁ-gil|CÁN-cer|DÚC-til|TRÉ-bol|ÁR-bo-les|LÁ-pi-ces|FÁ-ci-les|ÁN-ge-les|TÚ-ne-les|CÁR-ce-les|DÓ-la-res|LÍ-de-res|ÁL-bu-mes|MÓ-vi-les|HÁ-bi-les|DÓ-ci-les|CÓN-su-les|MÍ-si-les|CÓ-mo-do|SÓ-li-do|MÁ-xi-mo|MÍ-ni-mo|se-MÁ-fo-ro|PÚL-pi-to|Á-ci-do|É-po-ca|PÉ-si-mo|RÍ-gi-do|TÉ-tri-co|FRÍ-vo-lo|HÚ-me-do|LÁ-ti-go|MÉ-to-do|ÓR-ga-no|PRÓ-xi-mo|RÁ-pi-da|SÚ-bi-to|TÍ-mi-do|VÉR-ti-go|VÍC-ti-ma|CÁ-li-da|CÍ-ni-co|DÉ-bi-les|DÉ-fi-cit|LÉ-xi-co|MÁ-gi-ca|ÓP-ti-ca|PLÁS-ti-co|RÚS-ti-co|TÁC-ti-ca|ZÓ-ca-lo|Á-ti-co|BÁ-si-co|CÉ-le-bre|CÚ-pu-la|DÍ-na-mo|É-xi-to|FÉ-re-tro|HÍ-ga-do|Í-do-lo|LÁ-pi-da|NÓ-ma-da|PÁ-li-do|PÉ-sa-me|PÓ-li-za|PÚR-pu-ra|RÁ-fa-ga|SÓ-ta-no|TÓ-ni-ca|his-TÓ-ri-co|po-LÍ-ti-ca|CLÍ-ni-ca|FÍ-si-ca|TÉC-ni-ca|LÓ-gi-ca|GRÁ-fi-ca|Á-bre-lo|DÍ-ga-lo|PÍ-de-me-lo|DÉ-ja-me-lo|CÓM-pra-te-lo|PRÉS-ta-me-lo|PÁ-sa-se-lo|BÚS-ca-me-lo|es-CÚ-cha-me-lo|CÁN-ta-se-lo|LLÉ-va-me-lo|TÓ-ma-se-lo";
+var W=RAW.concat(RAW2.split("|"),RAW3.split("|")).map(P),S=null,SEEN={};
+function $(s){return document.querySelector(s)}
+function shuf(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function fresh(a){return shuf(a).sort(function(x,y){return(SEEN[x.k]||0)-(SEEN[y.k]||0)})}
+function pick(n,nf){var a=fresh(W.slice()),f=a.filter(function(x){return!x.tl}).slice(0,nf),t=a.filter(function(x){return x.tl}).slice(0,n-nf),r=shuf(f.concat(t));r.forEach(function(x){SEEN[x.k]=(SEEN[x.k]||0)+1});return r}
+function getB(){try{return JSON.parse(localStorage.getItem("acen1")||"{}")}catch(e){return{}}}
+function setB(m,s){try{var b=getB();if((b[m]||0)<s){b[m]=s;localStorage.setItem("acen1",JSON.stringify(b))}}catch(e){}}
+function menu(){S=null;var b=getB();$("#app").innerHTML='<div class="hero"><div class="mark">´</div><div><h1>Acentúa</h1><p>Practica la tilde paso a paso. Nivel inicial: palabras sin vocales juntas.</p></div></div><div class="route"><span>1 Separo sílabas</span><span>2 Hallo la tónica</span><span>3 Pongo la tilde</span></div><div class="menu">'+M.map(function(m){var s=b[m.id];return'<button class="mc'+(m.id==4?" all":"")+'" data-m="'+m.id+'"><span class="n">'+m.ic+'</span><span><b>'+m.t+'</b><small>'+m.d+'</small></span><span class="stt">'+(s?"★".repeat(s)+"☆".repeat(3-s):"")+'</span></button>'}).join("")+'</div><p class="tip">Consejo: di cada palabra en voz alta y alárgala (caaa-MIII-noooo) para oír la sílaba fuerte.</p>';
+document.querySelectorAll(".mc").forEach(function(c){c.onclick=function(){start(+c.dataset.m)}})}
+function start(m){var ws=pick(m==4?10:8,m==4?5:m==2?5:4);S={m:m,ws:ws,i:0,ph:0,sc:0,st:0,ok:0,tot:0,tr:0,mx:m==4?1:2,cur:"",pt:{cut:[0,0],ton:[0,0],til:[0,0]}};phase()}
+function frame(h){$("#app").innerHTML='<div class="top"><button class="back" id="bk">‹ Menú</button><div class="bar"><i style="width:'+S.i/S.ws.length*100+'%"></i></div><span class="chip" id="sc">⭐ '+S.sc+'</span><span class="chip" id="stk">🔥 '+S.st+'</span></div><div class="card">'+h+'</div>';$("#bk").onclick=menu}
+function chips(){$("#sc").textContent="⭐ "+S.sc;$("#stk").textContent="🔥 "+S.st}
+function head(n,t){return'<p class="q"><span class="sn">'+n+'</span><span>'+t+'</span></p>'}
+function phase(){var w=S.ws[S.i],k=M[S.m-1].ph[S.ph];S.tr=0;S.cur=k;({cut:Pcut,ton:Pton,til:Ptil,free:Preto})[k](w)}
+function grade(ok){var p=S.pt[S.cur];if(ok){var f=S.tr==0;S.sc+=f?10:5;S.st=f?S.st+1:0;if(f){S.ok++;p[0]++}S.tot++;p[1]++;chips();return 1}S.tr++;S.st=0;if(S.tr>=S.mx){S.tot++;p[1]++;chips();return 2}chips();return 0}
+function lab(){return S.ph<M[S.m-1].ph.length-1?"Siguiente paso":S.i<S.ws.length-1?"Siguiente palabra":"Ver resultado"}
+function nxt(){if(S.ph<M[S.m-1].ph.length-1){S.ph++;phase()}else if(S.i<S.ws.length-1){S.i++;S.ph=0;phase()}else end()}
+function fbd(c,m,fin){$("#fb").innerHTML='<div class="fb '+c+'">'+m+'</div>'+(fin?'<button class="btn" id="nx">'+lab()+'</button>':"");if(fin){$("#nx").onclick=nxt;$("#nx").scrollIntoView({block:"nearest"})}}
+function dragTok(tok,sel,cb){var armed=false;
+function hit(x,y){var b=null,bd=1e9;document.querySelectorAll(sel).forEach(function(t){var r=t.getBoundingClientRect(),dx=Math.max(Math.abs(x-(r.left+r.right)/2)-r.width/2,0),dy=Math.max(Math.abs(y-(r.top+r.bottom)/2)-r.height/2,0),d=Math.hypot(dx,dy);if(d<bd){bd=d;b=t}});return bd<22?b:null}
+document.querySelectorAll(sel).forEach(function(t){t.addEventListener("click",function(){if(armed){armed=false;tok.classList.remove("sel");cb(t)}})});
+tok.addEventListener("pointerdown",function(e){e.preventDefault();var r=tok.getBoundingClientRect(),g=tok.cloneNode(true),sx=e.clientX,sy=e.clientY,moved=false,ov=null;g.removeAttribute("id");g.classList.add("ghost");g.classList.remove("sel");g.style.width=r.width+"px";g.style.height=r.height+"px";document.body.appendChild(g);
+function pos(ev){g.style.left=ev.clientX-r.width/2+"px";g.style.top=ev.clientY-r.height/2-26+"px"}pos(e);
+function mv(ev){pos(ev);if(Math.abs(ev.clientX-sx)+Math.abs(ev.clientY-sy)>8)moved=true;var t=hit(ev.clientX,ev.clientY-26);if(t!==ov){if(ov)ov.classList.remove("over");ov=t;if(ov)ov.classList.add("over")}}
+function up(ev){document.removeEventListener("pointermove",mv);document.removeEventListener("pointerup",up);document.removeEventListener("pointercancel",up);g.remove();if(ov)ov.classList.remove("over");if(moved){var t=hit(ev.clientX,ev.clientY-26);if(t)cb(t)}else{armed=!armed;tok.classList.toggle("sel",armed)}}
+document.addEventListener("pointermove",mv);document.addEventListener("pointerup",up);document.addEventListener("pointercancel",up)})}
+function sh(w){return S.m==4?w.y:w.s}
+function say(t,r){var s=window.speechSynthesis,m=function(x){var e=$("#spm");if(e)e.textContent=x};
+if(!s||typeof SpeechSynthesisUtterance==="undefined"){m("Este navegador no puede leer en voz alta. Prueba a abrir la app en Chrome o Safari.");return}
+try{if(s.speaking||s.pending)s.cancel();var go=false,u=new SpeechSynthesisUtterance(t);u.lang="es-ES";u.rate=r||.85;u.volume=1;var v=s.getVoices().filter(function(x){return/^es/i.test(x.lang)})[0];if(v)u.voice=v;u.onstart=function(){go=true;m("")};u.onerror=function(){m("¿No se oye? Sube el volumen, quita el modo silencio o prueba en Chrome o Safari.")};s.speak(u);setTimeout(function(){if(!go)m("Si no se oye nada: sube el volumen, quita el modo silencio o abre la app en Chrome o Safari.")},2000)}catch(e){m("No se ha podido reproducir el audio en este dispositivo.")}}
+function spk(){return'<button class="spk" id="sp">🔊 Escuchar</button><div class="spm" id="spm"></div>'}
+function bindSpk(w){var b=$("#sp");if(b)b.onclick=function(){say(w.k)}}
+function bd(){var n={cut:"Separar sílabas",ton:"Sílaba tónica y tipo",til:"Poner la tilde"},ks=Object.keys(n),o=ks.map(function(k){var p=S.pt[k];return'<li>'+n[k]+': <b>'+p[0]+' de '+p[1]+'</b></li>'}).join(""),w=ks.sort(function(a,b){return S.pt[a][0]/S.pt[a][1]-S.pt[b][0]/S.pt[b][1]})[0];return'<ul class="bd">'+o+'</ul>'+(S.pt[w][0]<S.pt[w][1]?'<p class="note">Para repasar: <b>'+n[w]+'</b></p>':"")}
+function cum(w){var a=[],s=0;w.y.forEach(function(y,i){s+=y.length;if(i<w.y.length-1)a.push(s)});return a}
+function Pcut(w){S.cuts={};var L=(S.m==4?w.pl:w.k).split(""),h="",v=L.filter(function(c){return/[aeiouáéíóú]/.test(c)}).length;
+L.forEach(function(c,i){h+='<span class="L'+(/[aeiouáéíóú]/.test(c)?" v":"")+'">'+c+'</span>';if(i<L.length-1)h+='<button class="g" data-k="'+(i+1)+'" aria-label="Cortar después de '+c+'"></button>'});
+frame(head(1,"Escucha la palabra y toca entre las letras para cortarla en sílabas")+spk()+'<div class="wd" id="wd" style="--n:'+L.length+'">'+h+'</div><button class="spk" id="s1a">🔊 Así suena tu separación</button><div><button class="btn" id="ck">Comprobar</button></div><div id="fb"></div>');
+$("#s1a").onclick=function(){var ks=Object.keys(S.cuts).map(Number).sort(function(a,b){return a-b}),b=[0].concat(ks),e=ks.concat([w.k.length]);sayList(b.map(function(x,i){return w.k.slice(x,e[i])}))};bindSpk(w);document.querySelectorAll(".g").forEach(function(g){g.onclick=function(){var k=g.dataset.k;if(S.cuts[k])delete S.cuts[k];else S.cuts[k]=1;g.classList.toggle("on")}});
+$("#ck").onclick=function(){var need=cum(w),got=Object.keys(S.cuts).map(Number).sort(function(a,b){return a-b}),r=grade(need.join()==got.join());
+if(r){document.querySelectorAll(".g").forEach(function(g){g.classList.toggle("on",need.indexOf(+g.dataset.k)>-1)});$("#wd").classList.add("lock");$("#ck").remove();
+fbd(r==1?"ok":"bad",r==1?"¡Eso es! <b>"+sh(w).join("-")+"</b> ("+w.y.length+" sílabas)":"Se separa así: <b>"+sh(w).join("-")+"</b>. Una consonante entre vocales se va con la vocal de la derecha.",1)}
+else fbd("bad",got.length+1!=w.y.length?"Esta palabra tiene "+v+" vocales, así que "+v+" sílabas ("+(v-1)+(v==2?" corte":" cortes")+"). Tú has hecho "+got.length+". Inténtalo otra vez.":"El número de cortes está bien, pero alguno está mal puesto. Recuerda: ch, ll y rr nunca se separan, y una consonante entre vocales se va con la de la derecha.")}}
+function stw(w,i){var p=0,k;for(k=0;k<i;k++)p+=w.y[k].length;var v=w.y[i].search(/[aeiou]/);return w.pl.split("").map(function(c,x){return x==p+v?"áéíóú"["aeiou".indexOf(c)]:c}).join("")}
+function Pton(w){var T={s:-1,t:-1,ls:0,lt:0,tr:0},n=w.y.length;
+function fin(ok,f){S.tot++;S.pt.ton[1]++;if(ok){S.sc+=f?10:5;if(f){S.ok++;S.pt.ton[0]++}}}
+frame(head(2,"Escucha la palabra y toca la sílaba que suena más fuerte")+spk()+'<div class="sylrow" id="syr">'+w.s.map(function(s,i){return'<button class="sy tp" data-i="'+i+'">'+s+'</button>'}).join("")+'</div><button class="spk" id="s2a">🔊 Así suena con esa sílaba fuerte</button><p class="q">¿Qué tipo de palabra es?</p><div class="row" id="tys">'+TY.map(function(t,i){return'<button class="ch" data-i="'+i+'">'+t+'</button>'}).join("")+'</div><button class="spk" id="s2b">🔊 Así suena con ese tipo de palabra</button><div class="spm" id="m2"></div><div><button class="btn" id="ck">Comprobar</button></div><div id="fb"></div>');
+var sp=document.querySelectorAll(".tp"),tb=document.querySelectorAll("#tys .ch");bindSpk(w);
+sp.forEach(function(b){b.onclick=function(){if(T.ls)return;T.s=+b.dataset.i;sp.forEach(function(x){x.classList.remove("tn","bad")});b.classList.add("tn")}});
+tb.forEach(function(b){b.onclick=function(){if(T.lt)return;T.t=+b.dataset.i;tb.forEach(function(x){x.classList.remove("on","no")});b.classList.add("on")}});
+$("#s2a").onclick=function(){if(T.s<0){$("#m2").textContent="Toca primero una sílaba.";return}$("#m2").textContent="";say(stw(w,T.s))};
+$("#s2b").onclick=function(){if(T.t<0){$("#m2").textContent="Elige primero un tipo de palabra.";return}var i=n-1-T.t;if(i<0){$("#m2").textContent="Esta palabra solo tiene "+n+" sílabas, así que no puede ser "+TY[T.t]+".";return}$("#m2").textContent="";say(stw(w,i))};
+$("#ck").onclick=function(){if((!T.ls&&T.s<0)||(!T.lt&&T.t<0)){fbd("bad","Marca la sílaba tónica y elige el tipo de palabra. Después pulsa Comprobar.");return}
+var f=T.tr==0,last=T.tr>=1,m=[],rl="Cuenta desde el final: última sílaba = aguda, penúltima = llana, antepenúltima = esdrújula.";
+if(!T.ls){if(T.s==w.t){T.ls=1;fin(1,f)}else if(last){T.ls=1;fin(0,f);sp[T.s].classList.add("bad");m.push("La sílaba tónica no era «"+w.s[T.s].toUpperCase()+"», sino «"+w.s[w.t].toUpperCase()+"».")}else{sp[T.s].classList.remove("tn");sp[T.s].classList.add("bad");m.push("La sílaba «"+w.s[T.s].toUpperCase()+"» no es la tónica. Escúchala con el altavoz y compárala con las otras.")}}
+if(!T.lt){if(T.t==w.n){T.lt=1;fin(1,f)}else if(last){T.lt=1;fin(0,f);tb[T.t].classList.add("no");m.push("No era «"+TY[T.t]+"». "+rl)}else{tb[T.t].classList.remove("on");tb[T.t].classList.add("no");m.push("«"+TY[T.t]+"» no es correcto. "+rl)}}
+if(T.ls){sp.forEach(function(x){x.classList.remove("tn")});sp[w.t].classList.add("tn")}
+if(T.lt){tb.forEach(function(x){x.classList.remove("on")});tb[w.n].classList.add("ok")}
+T.tr++;
+if(T.ls&&T.lt){$("#ck").remove();var good=m.length==0;fbd(good?"ok":"bad",(good?(f?"¡Eso es! ":"Muy bien, lo has corregido. "):m.join(" ")+" ")+"La tónica es «"+w.s[w.t].toUpperCase()+"»: la palabra es <b>"+TY[w.n]+"</b> (la sílaba fuerte es "+OR[w.n]+").",1)}
+else{fbd("bad",m.join(" ")+" Cámbialo y vuelve a comprobar.");$("#ck").textContent="Comprobar otra vez"}}}
+function rule(w){return w.n>1?"Las "+TY[w.n]+"s siempre llevan tilde":"Una "+TY[w.n]+" que acaba en "+(w.g?"N, S o vocal":"otra letra")+(w.tl?" lleva tilde":" no lleva tilde")}
+function Ptil(w){var h=w.y.map(function(s,i){return'<div class="sw"><div class="sy'+(i==w.t?" tn":"")+'">'+s.split("").map(function(c){var v=/[aeiou]/.test(c);return'<span class="'+(v?"vw":"cc")+'"'+(v?' data-t="v'+i+'"':"")+'>'+c+'</span>'}).join("")+'</div></div>'}).join("");
+frame(head(3,S.m==4?"Ahora tú solo: ¿lleva tilde?":"Aplica las normas: ¿lleva tilde?")+'<div class="sylrow">'+h+'</div>'+(S.m==4?"":'<p class="note">Es una palabra <b>'+TY[w.n]+'</b> y acaba en <b class="last">'+w.l+'</b></p><details class="chu"><summary>Ver la chuleta de normas</summary><table><tr><th></th><th>N, S o vocal</th><th>Otra letra</th></tr><tr><td>Aguda</td><td>con tilde</td><td>sin tilde</td></tr><tr><td>Llana</td><td>sin tilde</td><td>con tilde</td></tr><tr><td>Esdrújula</td><td colspan="2">siempre con tilde</td></tr></table></details>')+'<div id="mid"></div><div id="fb"></div>');
+if(w.n>1||S.m==4)place(w);else{$("#mid").innerHTML='<p class="q">¿Cómo acaba la palabra?</p><div class="row"><button class="ch" data-g="1">N, S o vocal</button><button class="ch" data-g="0">Otra letra</button></div>';
+document.querySelectorAll(".ch").forEach(function(b){b.onclick=function(){var r=grade(!!+b.dataset.g==w.g);if(r){$("#mid").innerHTML="";$("#fb").innerHTML="";place(w)}else fbd("bad","Mira la última letra: «"+w.l+"». ¿Es N, S o vocal (a, e, i, o, u)?")}})}}
+function place(w){S.tr=0;$("#mid").innerHTML='<p class="q">¿Lleva tilde?</p><div class="row"><button class="ch" data-y="1">Sí lleva tilde</button><button class="ch" data-y="0">No lleva tilde</button></div>';
+function apply(){if(w.tl){var v=document.querySelector('.vw[data-t="v'+w.t+'"]');v.textContent="áéíóú"["aeiou".indexOf(v.textContent)];v.classList.add("tl")}}
+document.querySelectorAll(".ch").forEach(function(b){b.onclick=function(){var r=grade(!!+b.dataset.y==w.tl);
+if(r){document.querySelectorAll(".ch").forEach(function(x){x.disabled=true;if(!!+x.dataset.y==w.tl)x.classList.add("ok")});apply();fbd(r==1?"ok":"bad",(r==1?"¡Eso es! ":"")+rule(w)+": <b>"+w.k+"</b>",1)}
+else fbd("bad",w.n>1?"No es correcto. Recuerda lo que pasa con las esdrújulas.":"No es correcto. Mira la chuleta: busca «"+TY[w.n]+"» y la última letra de la palabra.")}})}
+function sayList(a){say(a.join(", "),.7)}
+function Preto(w){var pl=w.pl,n=pl.length,R={cuts:{},ton:-1,tl:{}},tv=0,i,h="";
+for(i=0;i<w.t;i++)tv+=w.y[i].length;tv+=w.y[w.t].search(/[aeiou]/);
+function stress(){var s=sy().r.filter(function(r){return r.s==R.ton})[0],j=-1,k;if(!s)return null;for(k=s.s;k<s.e;k++)if(/[aeiou]/.test(pl[k])){j=k;break}if(j<0)return pl;return pl.split("").map(function(c,x){return x==j?"áéíóú"["aeiou".indexOf(c)]:c}).join("")}
+function wr(){return pl.split("").map(function(c,j){return R.tl[j]?"áéíóú"["aeiou".indexOf(c)]:c}).join("")}
+function sy(){var ks=Object.keys(R.cuts).map(Number).sort(function(a,b){return a-b});return{ks:ks,r:[0].concat(ks).map(function(s,j){return{s:s,e:j<ks.length?ks[j]:n}})}}
+function drS(){$("#syr").innerHTML=sy().r.map(function(r){return'<button class="sy tp'+(r.s==R.ton?" tn":"")+'" data-s="'+r.s+'">'+pl.slice(r.s,r.e)+'</button>'}).join("");document.querySelectorAll(".tp").forEach(function(b){b.onclick=function(){R.ton=+b.dataset.s;drS()}})}
+function drW(){$("#wr").innerHTML=pl.split("").map(function(c,j){return/[aeiou]/.test(c)?'<button class="L v vb'+(R.tl[j]?" tl":"")+'" data-j="'+j+'" aria-label="Tilde en '+c+'">'+(R.tl[j]?"áéíóú"["aeiou".indexOf(c)]:c)+'</button>':'<span class="L">'+c+'</span>'}).join("");document.querySelectorAll(".vb").forEach(function(b){b.onclick=function(){var j=b.dataset.j,on=!!R.tl[j];R.tl={};if(!on)R.tl[j]=1;drW()}})}
+pl.split("").forEach(function(c,j){h+='<span class="L'+(/[aeiou]/.test(c)?" v":"")+'">'+c+'</span>';if(j<n-1)h+='<button class="g" data-k="'+(j+1)+'" aria-label="Cortar después de '+c+'"></button>'});
+frame('<p class="note">Reto: hazlo todo tú. Te corregimos al final de cada palabra.</p>'+head(1,"Escucha la palabra y córtala en sílabas")+spk()+'<div class="wd" id="wd" style="--n:'+n+'">'+h+'</div><button class="spk" id="s1a">🔊 Así suena tu separación</button>'+head(2,"Toca la sílaba tónica")+'<div class="sylrow" id="syr"></div><button class="spk" id="s2a">🔊 Así suena con esa sílaba fuerte</button><div class="spm" id="m2"></div>'+head(3,"Escribe la palabra. Si lleva tilde, toca la vocal donde va (solo una; otro toque la quita). Si no lleva, déjala como está")+'<div class="wd" id="wr" style="--n:'+n+'"></div><button class="spk" id="sp2">🔊 Así suena lo que has escrito</button><div><button class="btn" id="ck">Comprobar</button></div><div id="fb"></div>');
+document.querySelectorAll(".g").forEach(function(g){g.onclick=function(){var k=g.dataset.k;if(R.cuts[k])delete R.cuts[k];else R.cuts[k]=1;g.classList.toggle("on");R.ton=-1;drS()}});
+bindSpk(w);$("#sp2").onclick=function(){say(wr())};$("#s1a").onclick=function(){sayList(sy().r.map(function(r){return pl.slice(r.s,r.e)}))};$("#s2a").onclick=function(){var t=stress();$("#m2").textContent=t?"":"Toca primero la sílaba tónica.";if(t)say(t)};drS();drW();
+$("#ck").onclick=function(){var s=sy(),c1=cum(w).join()==s.ks.join(),ms=s.r.filter(function(r){return r.s==R.ton})[0],c2=!!ms&&tv>=ms.s&&tv<ms.e,tk=Object.keys(R.tl).map(Number),c3=w.tl?(tk.length==1&&tk[0]==tv):tk.length==0,c=[c1,c2,c3],k=c.filter(Boolean).length,nv=w.y.length,sylr=w.y.join("-"),mine=pl.split("").map(function(ch,j){return(j&&R.cuts[j]?"-":"")+ch}).join("");
+["cut","ton","til"].forEach(function(q,j){S.pt[q][1]++;if(c[j])S.pt[q][0]++});S.ok+=k;S.tot+=3;S.sc+=10*k;S.st=k==3?S.st+1:0;chips();
+["#wd","#syr","#wr"].forEach(function(q){$(q).classList.add("lock")});$("#ck").remove();$("#sp2").remove();
+var t1=c1?"Separaste bien: <b>"+sylr+"</b>.":"Tú: <b>"+mine+"</b>. Correcto: <b>"+sylr+"</b>. "+(s.ks.length+1!=nv?"Tiene "+nv+" vocales, así que "+nv+" sílabas.":"Una consonante entre vocales se va con la de la derecha; dos consonantes se separan, salvo ch, ll, rr y parejas como bl, pr o tr."),
+t2=(c2?"":(ms?"Marcaste «"+pl.slice(ms.s,ms.e).toUpperCase()+"». ":"No marcaste ninguna sílaba. "))+"La tónica es «"+w.y[w.t].toUpperCase()+"»: la palabra es <b>"+TY[w.n]+"</b> (la sílaba fuerte es "+OR[w.n]+").",
+all=tk.length>0&&tk.every(function(j){return j==tv}),pre="";
+if(!c3){if(w.tl&&tk.length==0)pre="Te faltó la tilde. ";else if(!w.tl&&all)pre="Has puesto tilde en la sílaba fuerte: no cambia cómo suena, pero esta palabra no la lleva. ";else if(!w.tl)pre="Esta palabra no lleva tilde, y la que has puesto cambia cómo suena. ";else pre="La tilde va en la vocal de la sílaba tónica. "}
+var t3=pre+rule(w)+": se escribe <b>"+w.k+"</b>.";
+function fr(ok,t,x){return'<div class="fr '+(ok?"ok":"bad")+'"><b>'+(ok?"✔ ":"✘ ")+t+'</b><br>'+x+'</div>'}
+$("#fb").innerHTML=fr(c1,"1. Sílabas",t1)+fr(c2,"2. Sílaba tónica",t2)+fr(c3,"3. Tilde",t3)+'<p class="note">Tú escribiste: <b>'+wr()+'</b>. Correcta: <b>'+w.k+'</b>.</p><div class="row"><button class="spk" id="s1">🔊 Lo que escribiste</button><button class="spk" id="s2">🔊 La correcta</button></div><button class="btn" id="nx">'+lab()+'</button>';
+$("#s1").onclick=function(){say(wr())};$("#s2").onclick=function(){say(w.k)};$("#nx").onclick=nxt;$("#fb").scrollIntoView({block:"nearest"})}}
+function end(){var p=S.tot?S.ok/S.tot:0,s=p>.85?3:p>.6?2:1,msg=["Buen comienzo. Repite la ronda: la práctica crea el hábito.","¡Muy bien! Con otra ronda lo clavas.","¡Excelente! Este paso ya lo dominas."][s-1];setB(S.m,s);
+$("#app").innerHTML='<div class="top"><button class="back" id="bk">‹ Menú</button></div><div class="card"><div class="stars" aria-label="'+s+' de 3 estrellas">'+"<span>★</span>".repeat(s)+'<span style="opacity:.3">★</span>'.repeat(3-s)+'</div><h2>'+M[S.m-1].t+'</h2><p>'+msg+'</p><p class="note"><b>'+S.sc+' puntos</b>. A la primera: '+S.ok+' de '+S.tot+'.</p>'+(S.m==4?bd():"")+'<div class="row"><button class="btn" id="rp">Otra ronda</button><button class="btn alt" id="mn">Menú</button></div></div>';
+var m=S.m;$("#rp").onclick=function(){start(m)};$("#mn").onclick=menu;$("#bk").onclick=menu}
+menu();
+</script></body></html>
